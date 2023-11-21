@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.App {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins',sans-serif;
+  background: rgb(1, 4, 36);
+}
+
+/* Header-section */
+
+.head-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  width: 100%;
+  background: white;
+}
+.head-section img {
+  position: absolute;
+  left: 10px;
+  width: 250px;
+  height: 130px;
+  color: rgb(251, 163, 10);
+}
+.nav-content ul {
+  top: 60px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 40px;
+  list-style-type: none;
+  cursor: pointer;
+}
+.nav-content li {
+  margin-left: 30px;
+}
+.nav-content .line {
+  margin-left: 30px;
+  text-decoration: none;
+  color: rgb(2, 2, 29);
+  transition: 0.5s ease;
+}
+.nav-content .line:hover {
+  color: rgb(98, 255, 70);
+}
+
+@media (max-width: 986px) {
+  .head-section {
+    margin-bottom: 100px;
+  }
+  .burger-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 35px;
+    font-size: 24px;
+    right: 20px;
+  }
+  .nav-content {
+    z-index: 1;
+  }
+  .nav-content ul {
+    display: none;
+  }
+  .nav-content .show-menu {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding: 30px;
+  }
+  .show-menu li {
+    position: relative;
+    margin: 10px;
+  }
+  .body-container {
+    flex-direction: column;
+  }
+  .profile-detail {
+    max-width: 600px;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 525px) {
+  .head-section h1 {
+    font-size: 2rem;
+  }
+  .profile-detail {
+    max-width: 400px;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 450px) {
+  .profile-detail {
+    max-width: 300px;
+  }
+}
+
+/* Home-Body Section */
+
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  color: white;
+}
+.left-section img {
+  width: 300px;
+  height: 300px;
+}
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+}
+.start-now {
+  margin: 20px;
+  margin-bottom: 60px;
+  padding: 10px 15px;
+  background: rgb(98, 255, 70);
+  border: 2px solid rgb(98, 255, 70);
+  color: rgb(1, 4, 36);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+}
+.start-now:hover {
+  background: transparent;
+  color: rgb(98, 255, 70);
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgb(255, 234, 118);
+}
+
+/* Input-Fields */
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 10px;
+  color: green;
+}
+.inputs {
+  margin: 30px 10px;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(0, 0, 0,0.2);
+}
+.bills-container {
+  color: white;
+  margin: 10px;
+}
+.bills-container input {
+  margin-left: 20px;
+  padding: 10px;
+}
+.monthly-income {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255,0.4);
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+.monthly-income h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 20px;
+  color: white;
+}
+.monthly-income input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 20px;
+  border: 2px solid rgb(14, 235, 209);
+  outline: none;
+}
+.inputs h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.inputs input {
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+  border: 2px solid grey;
+  border-radius: 100px;
+  outline: none;
+}
+.button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background: rgb(14, 235, 209);
+  border: 2px solid rgb(14, 235, 209);
+  border-radius: 5px;
+  transition: 0.6s ease-in-out;
+}
+.button:hover {
+  background: transparent;
+  color: rgb(14, 235, 209);
+}
+
+/* User-Profile */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.balance-savings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+.profile-detail {
+  align-items: center;
+  justify-content: center;
+  background: rgb(2, 2, 29);
+}
+.profile-table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.profile-table th, .profile-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+.profile-table td {
+  text-align: center;
+  color: white;
+}
+.profile-table th {
+  background-color: #f2f2f2;
+}
+
+.profile-balance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 10px;
+  background: rgb(251, 163, 10);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+.profile-balance img {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+}
+.percentage h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+.percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.percentage p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.percent-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.percent-circle p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.percent-circle svg {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+.percent-circle svg circle {
+  width: 200px;
+  height: 200px;
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+}
+.percent-circle svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #c4c4c4;
+}
+.percent-circle svg circle:nth-child(2) {
+  stroke: blue;
+}
+.percent-circle .percentage-center {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}
+.percent-circle .percentage-center span {
+  font-size: 24px;
+}
+.percentage li {
+  list-style-type: none;
+}
+
+
+/* Recommended */
+
+.recommendation-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.command {
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0);
+}
+.recommended {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 0 auto;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: 0.5s ease;
+}
+.recommended:hover {
+  transform: scale(1.1);
+}
+.reduce-limits {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+.reduce-limits button {
+  margin: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  background: rgb(6, 85, 255);
+  border: 2px solid rgb(6, 85, 255);
+  color: white;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+.reduce-limits button:hover {
+  background: transparent;
+  color: rgb(6, 85, 255);
+}
+.percentage-expense {
+  margin: 10px 50px;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border: 40px solid grey;
+  border-radius: 50%;
+}
+
+/* About section */
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+.left-photo img{
+  height: 330px;
+  width: 300px;
+  border-radius: 50%;
+}
+.right-about {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  max-width: 600px;
+  margin: 50px;
+}
+.right-about h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.right-about span {
+  color: rgb(98, 255, 70);
+}
+
+.tax-amounts {
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
+}
+#tables {
+  color: white;
+  margin-top: 50px;
+  background: #000;
+}
+#tables table {
+  border-collapse: collapse; 
+}
+table th, td {
+  border: 1px solid white;
+  padding: 10px;
+}
+.del-gen {
+  margin: 10px;
+}
+.generate {
+  color: white;
+  border: 2px solid blue;
+  border-radius: 10px;
+  background: blue;
+  padding: 15px 24px;
+  font-size: 1rem;
+}
+.generate:hover {
+  color: blue;
+  background: transparent;
+}
