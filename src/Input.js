@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import Tesseract from 'tesseract.js';
 import { Link } from 'react-router-dom';
 
-const Input = ({ incomes, handleDataSheetUpdate}) => {
+const Input = ({ handleDataSheetUpdate}) => {
 
   const [billCount, setBillCount] = useState(0);
   const [files, setFiles] = useState([]);
@@ -62,10 +62,6 @@ const Input = ({ incomes, handleDataSheetUpdate}) => {
 
   return (
     <div>
-      <div className="monthly-income">
-        <h4>Monthly Income</h4>
-        <input type="text" name="income" placeholder="Monthly Income" value={incomes.income} readOnly />
-      </div>
       <div className="bills-container">
         <label htmlFor="text">How many bills do you want to choose</label>
         <input

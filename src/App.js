@@ -1,7 +1,6 @@
 import Header from './Header';
 import Home from './Home';
 import Input from './Input';
-import Profile from './Profile'
 import {Route, Routes} from 'react-router-dom';
 import Tesseract from 'tesseract.js';
 import './App.css';
@@ -34,7 +33,6 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/input' element={<Input handleImageUpload={handleImageUpload}  handleDataSheetUpdate={handleDataSheetUpdate}/>}/>
-            <Route path='/profile' element={<Profile />}/>
             <Route path='/tax' element={<Tax  dataSheet={dataSheet}/>} />
           </Routes>
     </div>
