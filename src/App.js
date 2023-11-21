@@ -6,11 +6,10 @@ import {Route, Routes} from 'react-router-dom';
 import Tesseract from 'tesseract.js';
 import './App.css';
 import Tax from './Tax';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 
 function App() {
 
-  const [incomes, setIncomes] = useState({income: 0});
   const [dataSheet, setDataSheet] = useState([]);
 
   const handleImageUpload = () => {
@@ -34,8 +33,8 @@ function App() {
       <Header/>
           <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='/input' element={<Input incomes={incomes} handleImageUpload={handleImageUpload}  handleDataSheetUpdate={handleDataSheetUpdate}/>}/>
-            <Route path='/profile' element={<Profile incomes={incomes} />}/>
+            <Route path='/input' element={<Input handleImageUpload={handleImageUpload}  handleDataSheetUpdate={handleDataSheetUpdate}/>}/>
+            <Route path='/profile' element={<Profile />}/>
             <Route path='/tax' element={<Tax  dataSheet={dataSheet}/>} />
           </Routes>
     </div>

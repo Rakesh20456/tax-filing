@@ -34,7 +34,7 @@ const Tax = ({dataSheet}) => {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{amount}</td>
-                  <td>{total =+ amount}</td>
+                  <td>{total += amount}</td>
                 </tr>
               ))}
           </tbody>

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Tesseract from 'tesseract.js';
 import { Link } from 'react-router-dom';
 
 const Input = ({ incomes, handleDataSheetUpdate}) => {
 
   const [billCount, setBillCount] = useState(0);
-  const [dataSheet, setDataSheet] = useState([]);
   const [files, setFiles] = useState([]);
 
   const handleBillCountChange = (e) => {
